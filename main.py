@@ -1,10 +1,20 @@
 # This entrypoint file to be used in development. Start by reading README.md
-import medical_data_visualizer
+from RPS_game import play, mrugesh, abbey, quincy, kris, human, random_player
+from RPS import player
 from unittest import main
 
-# Test your function by calling it here
-medical_data_visualizer.draw_cat_plot()
-medical_data_visualizer.draw_heat_map()
+play(player, quincy, 1000)
+play(player, abbey, 1000)
+play(player, kris, 1000)
+play(player, mrugesh, 1000)
 
-# Run unit tests automatically
-main(module='test_module', exit=False)
+# Uncomment line below to play interactively against a bot:
+# play(human, abbey, 20, verbose=True)
+
+# Uncomment line below to play against a bot that plays randomly:
+# play(human, random_player, 1000)
+
+
+
+# Uncomment line below to run unit tests automatically
+# main(module='test_module', exit=False)
